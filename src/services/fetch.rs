@@ -174,7 +174,7 @@ where
         var callback = @{callback};
         var handle = {
             active: true,
-            callback,
+            callback: callback,
         };
         fetch(request).then(function(response) {
             var promise = (@{binary}) ? response.arrayBuffer() : response.text();
